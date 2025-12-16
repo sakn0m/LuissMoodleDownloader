@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Luiss Moodle Downloader Advanced",
+  "version": "2.0",
+  "description": "Download Moodle resources with file type filtering.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://my.luiss.it/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
