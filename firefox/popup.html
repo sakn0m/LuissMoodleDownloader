@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 250px; padding: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; background-color: #f4f4f4; }
+    h3 { margin-top: 0; color: #333; font-size: 16px; }
+    
+    /* Main Big Button */
+    .btn-main { 
+      background-color: #004671; /* Luiss Blue */
+      color: white; 
+      border: none; 
+      padding: 15px; 
+      cursor: pointer; 
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: background 0.2s;
+    }
+    .btn-main:hover { background-color: #003355; }
+
+    /* Grid for smaller buttons */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .btn-small {
+      background-color: #fff;
+      color: #333;
+      border: 1px solid #ccc;
+      padding: 8px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    /* Specific colors for specific types */
+    .btn-pdf:hover { background-color: #ffcccc; border-color: #ff0000; color: #cc0000; }
+    .btn-ppt:hover { background-color: #ffe5cc; border-color: #ff6600; color: #cc5200; }
+    .btn-ipynb:hover { background-color: #e6f2ff; border-color: #007bff; color: #0056b3; }
+    .btn-py:hover { background-color: #ffffcc; border-color: #ffcc00; color: #997a00; }
+
+    #status { margin-top: 15px; font-size: 12px; color: #666; min-height: 20px; }
+  </style>
+</head>
+<body>
+  <h3>Luiss Downloader</h3>
+  
+  <button id="btnAll" class="btn-main">DOWNLOAD ALL FILES</button>
+  
+  <div class="grid-container">
+    <button id="btnPdf" class="btn-small btn-pdf">PDF Only</button>
+    <button id="btnPpt" class="btn-small btn-ppt">PPT / PPTX</button>
+    <button id="btnIpynb" class="btn-small btn-ipynb">.ipynb Only</button>
+    <button id="btnPy" class="btn-small btn-py">.py Only</button>
+  </div>
+
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
